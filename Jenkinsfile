@@ -6,15 +6,22 @@ pipeline {
     dockerImage = ''
   }
 stages {
+    stage('git clone') {
+        steps {
+          git https://github.com/nigeldaniels/redswitch.git
+        }
+    }
+
+
      stage('Building image') {
-      steps{
+      steps {
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
     stage('Deploy Image') {
-      steps{
+      steps {
         script {
           docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
