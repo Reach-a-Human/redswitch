@@ -4,6 +4,7 @@ pipeline {
     registryCredential = 'tMU0etJEH7R8'
     dockerImage = ''
   }
+stages {
   agent any
      stage('Building image') {
       steps{
@@ -26,4 +27,5 @@ pipeline {
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
-  }
+   }
+ }
