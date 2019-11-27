@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     registry = "shiznit/redswitch"
-    registryCredential = 'tMU0etJEH7R8'
+    registryCredential = 'ccc18935-89da-4bdf-abe4-9295f7593427'
     dockerImage = ''
   }
 stages {
