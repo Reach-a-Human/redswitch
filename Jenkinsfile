@@ -8,10 +8,9 @@ pipeline {
 stages {
     stage('git clone') {
         steps {
-          git https://github.com/nigeldaniels/redswitch.git
+          git 'https://github.com/nigeldaniels/redswitch.git'
         }
     }
-
 
      stage('Building image') {
       steps {
