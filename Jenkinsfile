@@ -1,4 +1,5 @@
 pipeline {
+  agent none
   environment {
     registry = "shiznit/redswitch"
     registryCredential = 'tMU0etJEH7R8'
