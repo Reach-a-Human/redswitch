@@ -193,9 +193,9 @@ Redsiwitch tracks the event history hisetory of active calls on a per user baise
 ## Local Dev
 Redswitch requires an accessible Redis cluster and a Freeswitch instance.
 
-The `talkiq/redis` library can be used for the former:
+The `shiznit/redis` library can be used for the former:
 
-    cd /path/to/talkiq/redis
+    cd /path/to/shiznit/redis
     docker-compose up -d
 
 You can connect a local `redswitch` to the above network and a test Freeswitch
